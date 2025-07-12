@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "swiper/css";
+.hiking-slider {
+  background-image: url(../../wanderlust-frontend/src/assets/images/hiking-slider.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.left-about-content {
+  background-image: url(../../wanderlust-frontend/src/assets/images/column-bg.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.left-about-content h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 30%;
+  background-color: rgb(255 160 25);
+}
+.features-section {
+  background-image: url(../../wanderlust-frontend/src/assets/images/column-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.tour-carousel {
+  background-image: url(../src/assets/images/tour-item-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.count-item {
+  background-image: url(../src/assets/images/counter-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.customer-slider {
+  background-image: url(../src/assets/images/testimonial-bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
