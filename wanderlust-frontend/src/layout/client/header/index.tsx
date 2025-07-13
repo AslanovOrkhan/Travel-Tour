@@ -3,7 +3,7 @@ import logoImage from "../../../assets/images/logo-hiking-1.png";
 import logoMobile from "../../../assets/images/logo-hiking-mobile-1.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from "react";
-
+import AOS from "aos";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -15,13 +15,18 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
   return (
     <div
-      className={`lg:mt-19 mt-3 p-4 flex sticky top-0 right-0 w-full items-end lg:justify-center justify-between z-50 transition-all duration-300 ${
+      className={`overflow:hidden lg:mt-10 mt-3 p-4 flex sticky top-0 right-0 w-full items-end lg:justify-center justify-between z-50 transition-all duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <ul className="hidden items-end gap-10 lg:flex">
+      <ul data-aos="fade-down" className="hidden items-end gap-10 lg:flex">
         <li>
           <a
             href="#"
@@ -47,7 +52,7 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <img src={logoImage} alt="Logo" className="mx-5 w-43" />
+          <img src={logoImage} alt="Logo" className="mx-5 mb-2 w-43" />
         </li>
         <li>
           <a
@@ -74,10 +79,10 @@ const Header = () => {
           </a>
         </li>
       </ul>
-      <div className="lg:hidden">
+      <div data-aos="fade-down" className="lg:hidden">
         <img src={logoMobile} alt="" className="w-45" />
       </div>
-      <div className="flex items-end gap-5">
+      <div data-aos="fade-down" className="flex items-end gap-5">
         <SlBasket className="text-2xl text-amber-400 font-black text-center lg:hidden" />
         <RxHamburgerMenu className="text-2xl text-amber-400 flex font-black lg:hidden" />
       </div>

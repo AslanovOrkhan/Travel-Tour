@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "swiper/css";
+@import "aos/dist/aos.css";
+
 .hiking-slider {
   background-image: url(../../wanderlust-frontend/src/assets/images/hiking-slider.jpg);
   background-position: center;
@@ -45,10 +47,8 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #444;
-
-  /* Center slide text vertically */
-  display: flex;
+ 
+   display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -70,4 +70,18 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.customer-slider .title{
+position: relative;
+padding-bottom: 1.3rem;
+}
+.customer-slider .title:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 6%;
+  height: 4px;
+  background: orange;
 }
