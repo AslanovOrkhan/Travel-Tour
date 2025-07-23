@@ -10,7 +10,10 @@ import backpacktwo from "../../../assets/icons/backpacktwo.png";
 import mountainBg from "../../../assets/images/mountain-bg-2-2.jpg";
 import mountain from "../../../assets/images/mountian-.jpg";
 import sliderItemOne from "../../../assets/images/aaron-benson-200753-unsplash-400x285.jpg";
-import customer from "../../../assets/images/psinfinite2-768x597-150x150.jpg"
+import customer from "../../../assets/images/psinfinite2-768x597-150x150.jpg";
+import bgContact from "../../../assets/images/coffee.jpg";
+import featuredImage from "../../../assets/images/banner-2.png";
+import userCard from "../../../assets/images/red-hat-factory-768348-unsplash-550x500.jpg";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import * as React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +24,7 @@ import { FaStar } from "react-icons/fa";
 import CountUp from "react-countup";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import ToursCard from "../../../components/ToursCard";
-
+import product from "../../../assets/images/product-8-600x600.jpg";
 const Home = ({ text = "Orkhan Travel" }: { text: string }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -407,6 +410,10 @@ const Home = ({ text = "Orkhan Travel" }: { text: string }) => {
               delay: 3000,
               disableOnInteraction: false,
             }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
             slidesPerView={1}
             spaceBetween={40}
             className="mySwiper mt-16 lg:mt-20"
@@ -530,13 +537,55 @@ const Home = ({ text = "Orkhan Travel" }: { text: string }) => {
           </Swiper>
         </div>
       </section>
-      {/*    <section className="contact-form">
-        <div></div>
-        <div></div>
+      {/* <section className="shop-hiking-slider my-28 py-15 border border-amber-600">
+        <div className="lg:w-[86%] w-[90%] m-auto">
+          <div className="title flex md:flex-row flex-col md:items-center items-start gap-3 justify-between border border-amber-500">
+           <h3 className="lg:text-3xl text-xl font-bold text-[#193555] uppercase ">Shop Hiking Gear</h3>
+           <a href="#" className="flex items-center gap-3 border border-amber-700"><span className="text-base capitalize font-bold text-[#193555]">visit shop</span><FaArrowRightLong  className="mt-0.5 font-bold text-[#193555]"/></a>
+          </div>
+        </div>
+      </section> */}
+      <section className="contact-form bg-[#FFA11A] grid md:grid-cols-2 grid-rows overflow-hidden">
+        <div data-aos="fade-right">
+          <img src={bgContact} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="lg:px-28 px-5 md:py-0 py-5 flex flex-col items-start justify-center gap-3">
+           <h2 className="text-2xl text-white font-bold tracking-widest uppercase" data-aos="fade-left">
+            Subscribe
+          </h2>
+          <p className="text-white text-sm md:text-base" data-aos="fade-left">
+            To receive promotions and newsletter
+          </p>
+          <form className="flex items-center justify-between gap-5 w-full mt-6" data-aos="fade-left">
+             <input type="text" placeholder="your email address" className="border-b border-b-2 outline-0 py-3 capitalize text-lg w-full"/>
+            <button
+              type="submit"
+              className="py-3 px-7 uppercase font-bold text-sm tracking-widest bg-[#193555] text-white"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </section>
-      
-     
-      <section></section> */}
+      <section className="featured-card-container py-16 my-16">
+       <div className="w-[90%] lg:w-[86%] m-auto overflow-hidden">
+        <h3  data-aos="fade-down" className="text-center md:text-3xl text-2xl uppercase font-bold tracking-[1px] text-[#193555] my-7">We are featured in</h3>
+        <div className="grid md:grid-cols-5 my-10 overflow-hidden">
+          <div className="" data-aos="fade-down"><img src={featuredImage} alt="" className="w-full h-full object-cover"/></div>
+          <div className="" data-aos="fade-down"><img src={featuredImage} alt="" className="w-full h-full object-cover"/></div>
+          <div className="" data-aos="fade-down"><img src={featuredImage} alt="" className="w-full h-full object-cover"/></div>
+          <div className="" data-aos="fade-down"><img src={featuredImage} alt="" className="w-full h-full object-cover"/></div>
+          <div className="" data-aos="fade-down"><img src={featuredImage} alt="" className="w-full h-full object-cover"/></div>
+        </div>
+       </div>
+      </section>
+      <section className="grid md:grid-cols-5 mt-10 overflow-hidden">
+       <div className="overflow-hidden" data-aos="fade-down"><img src={userCard} alt="" className="w-full h-full object-cover"/></div>
+       <div className="overflow-hidden" data-aos="fade-down"><img src={userCard} alt="" className="w-full h-full object-cover"/></div>
+       <div className="overflow-hidden" data-aos="fade-down"><img src={userCard} alt="" className="w-full h-full object-cover"/></div>
+       <div className="overflow-hidden" data-aos="fade-down"><img src={userCard} alt="" className="w-full h-full object-cover"/></div>
+       <div className="overflow-hidden" data-aos="fade-down"><img src={userCard} alt="" className="w-full h-full object-cover"/></div>
+      </section>
     </>
   );
 };

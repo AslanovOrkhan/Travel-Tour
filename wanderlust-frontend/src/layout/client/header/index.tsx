@@ -4,6 +4,7 @@ import logoMobile from "../../../assets/images/logo-hiking-mobile-1.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import { Link } from "react-router";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,28 +29,28 @@ const Header = () => {
     >
       <ul data-aos="fade-down" className="hidden items-end gap-10 lg:flex">
         <li>
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
             home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="tourlist"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
             tour list
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="toursearch"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
             tour search
-          </a>
+          </Link>
         </li>
         <li>
           <img src={logoImage} alt="Logo" className="mx-5 mb-2 w-43" />
@@ -71,12 +72,12 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="contact"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
-            blog
-          </a>
+            contact
+          </Link>
         </li>
       </ul>
       <div data-aos="fade-down" className="lg:hidden">

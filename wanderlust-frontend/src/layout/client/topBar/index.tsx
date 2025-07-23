@@ -4,6 +4,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { GoMail } from "react-icons/go";
 import { PiLockKeyLight } from "react-icons/pi";
 import AOS from "aos";
+import { Link } from "react-router";
+import Login from "../../../pages/shared/Login";
 const TopBar = () => {
     useEffect(() => {
     AOS.init({
@@ -31,15 +33,15 @@ const TopBar = () => {
             <FaInstagram className="text-sm md:text-lg" />
             <FaXTwitter className="text-sm md:text-lg" />
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center cursor-pointer gap-2">
+          <div className="flex items-center lg:gap-10 gap-5">
+            <Link to="login" className="flex items-center cursor-pointer gap-2">
               <PiLockKeyLight className="text-sm md:text-lg" />
               <span className="text-base font-semibold">Login</span>
-            </div>
-            <div className="flex items-center cursor-pointer gap-2">
+            </Link>
+            <Link to="register" className="flex items-center cursor-pointer gap-2">
               <FaUser className="text-sm md:text-lg" />
               <span className="text-sm md:text-lg font-semibold">Sign Up</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
