@@ -14,7 +14,7 @@ const TopBar = () => {
   }, []);
   return (
     <>
-      <div className="flex justify-between items-center md:px-10 px-5 py-6 text-gray-500 text-sm bg-gray-100 md:bg-white overflow-hidden">
+      <div className="flex justify-between relative items-center md:px-10 px-5 py-6 text-gray-500 text-sm bg-gray-100 md:bg-white overflow-hidden">
         <div data-aos="fade-right" className="hidden items-center gap-5  md:flex">
           <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-sm font-semibold" />

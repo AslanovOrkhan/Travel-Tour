@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.0.17",
     "@tailwindcss/vite": "^4.1.11",
     "aos": "^2.3.4",
+    "fancybox": "^3.0.1",
     "framer-motion": "^12.23.7",
     "react-calendar": "^6.0.0",
     "react-countup": "^6.5.3",

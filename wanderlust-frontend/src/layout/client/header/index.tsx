@@ -27,7 +27,7 @@ const Header = () => {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <ul data-aos="fade-down" className="hidden items-end gap-10 lg:flex">
+      <ul data-aos="fade-down" className="items-end gap-10 hidden lg:flex">
         <li>
           <Link
             to="/"
@@ -53,30 +53,71 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <img src={logoImage} alt="Logo" className="mx-5 mb-2 w-43" />
+          <img src={logoImage} alt="Logo" className="lg:d-flex hidden mx-5 mb-2 w-43" />
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            to="destinations"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
             destinations
-          </a>
+          </Link>
         </li>
-        <li>
+        <li className="relative group">
           <a
             href="#"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
             pages
           </a>
+          <ul
+            className="absolute bg-black py-3 px-4 w-[10rem] opacity-0 translate-y-2 invisible 
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible 
+               transition-all duration-300 ease-in-out flex flex-col z-50"
+          >
+            <li>
+              <Link to="contact" className="text-white capitalize block w-full">
+                contact
+              </Link>
+            </li>
+            <li>
+              <Link to="portfolio" className="text-white capitalize block w-full">
+                portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="gallery" className="text-white capitalize block w-full">
+                gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="services" className="text-white capitalize block w-full">
+                services
+              </Link>
+            </li>
+            <li>
+              <a href="#" className="text-white capitalize block w-full">
+                item5
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-white capitalize block w-full">
+                item6
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-white capitalize block w-full">
+                item7
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <Link
-            to="contact"
+            to="blog"
             className="text-gray-500 font-bold text-sm uppercase tracking-widest"
           >
-            contact
+            blog
           </Link>
         </li>
       </ul>

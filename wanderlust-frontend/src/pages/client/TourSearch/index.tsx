@@ -11,10 +11,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoClose, IoSearch } from "react-icons/io5";
 import { TbGridDots } from "react-icons/tb";
+import ToursCard from "../../../components/ToursCard";
+import TopBar from "../../../layout/client/topBar";
+import sliderItemOne from "../../../assets/images/aaron-benson-200753-unsplash-400x285.jpg";
 
 const TourSearch = () => {
   const [showFilters, setShowFilters] = useState(true);
-
+  const [isGridView, setIsGridView] = useState(true);
   return (
     <>
       <TitleBanner title="Tour Search" />
@@ -349,7 +352,10 @@ const TourSearch = () => {
           <div className="border border-[#e5e5e5]  my-5 flex lg:flex-row flex-col items-center justify-between lg:gap-0 gap-4 p-4 rounded-sm">
             <div className="flex items-center justify-start lg:flex-row flex-col gap-4 w-full">
               <span className="font-bold text-lg">Sort by</span>
-              <select className="lg:px-4 px-0 py-2 text-gray-700 border-0 outline-0 w-full lg:w-auto" defaultValue="release">
+              <select
+                className="lg:px-4 px-0 py-2 text-gray-700 border-0 outline-0 w-full lg:w-auto"
+                defaultValue="release"
+              >
                 <option value="release">Release Date</option>
                 <option value="tour">Tour Date</option>
                 <option value="title">Title</option>
@@ -358,15 +364,178 @@ const TourSearch = () => {
                 <option value="rating">Rating</option>
                 <option value="duration">Duration</option>
               </select>
-              <select className="lg:px-4 px-0 py-2 text-gray-700 border-0 outline-0 w-full lg:w-auto" defaultValue="desc">
-                  <option value="asc">Ascending</option>
-                  <option value="desc">Descending</option>
+              <select
+                className="lg:px-4 px-0 py-2 text-gray-700 border-0 outline-0 w-full lg:w-auto"
+                defaultValue="desc"
+              >
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
               </select>
             </div>
             <div className="flex items-center justify-end gap-4">
-              <FaListUl  className="text-xl"/>
-              <TbGridDots className="text-2xl"/>
+              <FaListUl
+                onClick={() => setIsGridView(false)}
+                className={`text-xl cursor-pointer transition-colors duration-200 ${
+                  !isGridView
+                    ? "text-[#133A67] font-bold"
+                    : "text-gray-400 hover:text-[#133A67]"
+                }`}
+              />
+              <TbGridDots
+                onClick={() => setIsGridView(true)}
+                className={`text-2xl cursor-pointer transition-colors duration-200 ${
+                  isGridView
+                    ? "text-[#133A67] font-bold"
+                    : "text-gray-400 hover:text-[#133A67]"
+                }`}
+              />
             </div>
+          </div>
+          <div  className={`grid gap-4 ${isGridView ? "grid-cols-2" : "grid-cols-1"}`}>
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
+            <ToursCard
+              tourImage={sliderItemOne}
+              title="salam Orxan necesen"
+              data="9 days / 8 nights"
+              comment="(1preview)"
+              salePrice="2000"
+              costPrice="1500"
+            />
           </div>
         </div>
       </section>
