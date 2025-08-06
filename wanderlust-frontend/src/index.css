@@ -126,5 +126,11 @@
 .destinations-card:hover::before {
   opacity: 0.6;
 }
-
  
+.personal-slider-corusel{
+  background: url("../../wanderlust-frontend/src/assets/images/section-bg-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

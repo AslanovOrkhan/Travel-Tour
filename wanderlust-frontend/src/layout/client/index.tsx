@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router";
 import TopBar from "./topBar";
 import Header from "./header";

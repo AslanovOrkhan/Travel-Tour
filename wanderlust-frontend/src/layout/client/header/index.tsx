@@ -96,9 +96,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="text-white capitalize block w-full">
-                item5
-              </a>
+              <Link to="team" className="text-white capitalize block w-full">
+                team
+              </Link>
             </li>
             <li>
               <a href="#" className="text-white capitalize block w-full">

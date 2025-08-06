@@ -1,6 +1,7 @@
 import React from 'react'
 import TitleBanner from '../../../components/TitleBanner'
 import PortfolioCard from '../../../components/PortfolioCard'
+import TourSlider from '../../../components/TourSlider'
 
 const Portfolio = () => {
   return (

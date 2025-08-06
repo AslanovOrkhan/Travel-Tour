@@ -1,4 +1,8 @@
+import AdminLayout from "../layout/admin";
 import ClientLayout from "../layout/client";
+import AdminProfile from "../pages/admin/AdminProfile";
+import Dashboard from "../pages/admin/Dashboard";
+import UserManagament from "../pages/admin/UserManagement";
 import About from "../pages/client/About";
 import Blog from "../pages/client/Blog";
 import Contact from "../pages/client/Contact";
@@ -8,6 +12,7 @@ import Home from "../pages/client/Home";
 import Portfolio from "../pages/client/Portfolio";
 import Register from "../pages/client/Register";
 import Services from "../pages/client/Services";
+import TeamPage from "../pages/client/Team";
 import TourList from "../pages/client/TourList";
 import TourSearch from "../pages/client/TourSearch";
 import Login from "../pages/shared/Login";
@@ -65,6 +70,29 @@ const ROUTES = [
       {
         path: "services",
         element: <Services />,
+      },
+      {
+        path: "team",
+        element: <TeamPage />,
+      },
+    ],
+  },
+  // admin
+  {
+    element: <AdminLayout />,
+    path: "/admin/",
+    children: [
+      {
+        index: true,
+        element: <Dashboard />,
+      },
+      {
+        path: "adminProfile",
+        element: <AdminProfile />,
+      },
+       {
+        path: "usermanagament",
+        element: <UserManagament />,
       },
     ],
   },
